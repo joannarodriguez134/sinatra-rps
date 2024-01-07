@@ -1,0 +1,24 @@
+<%#  if @comp_move == "rock"
+    @outcome = "tied"  
+  elsif @comp_move == "paper"
+    @outcome = "lost"
+  else
+    @outcome = "won" 
+  end
+ 
+this is known as the silent erb tag which is when ruby code is moved to html (erb). to move html to a rb (ruby file) you use " "
+  %>
+  
+  
+  <h2>We played rock </h2>
+
+  <h2> They played <%= @comp_move %>! </h2>
+  <% if @outcome == "won" %>
+    <h2 style="color: green"> We <%= @outcome %>! </h2>
+  <% elsif @outcome == "lost" %>
+    <h2 style="color: red"> We <%= @outcome %>! </h2>
+  <% else %>
+    <h2 style="color: black"> We <%= @outcome %>! </h2>
+  <% end %>
+
+  
